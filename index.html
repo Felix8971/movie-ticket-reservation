@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet">
+   <title>Movies list</title>
+
+   <style>
+       html {
+           background: #f5f7f8;
+           font-family: 'Raleway', sans-serif;
+           padding: 20px 0;
+       }
+   
+       .band {
+           width: 90%;
+           max-width: 1240px;
+           margin: 0 auto;
+           display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: auto;
+           grid-gap: 20px;
+       }
+   
+       @media only screen and (min-width: 500px) {
+           .band {
+               grid-template-columns: 1fr 1fr;
+           }
+       }
+   
+       @media only screen and (min-width: 850px) {
+           .band {
+               grid-template-columns: 1fr 1fr 1fr 1fr;
+           }
+       }
+   
+       .card {
+           min-height: 100%;
+           background: white;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+           display: flex;
+           flex-direction: column;
+           text-decoration: none;
+           color: #444;
+           position: relative;
+           top: 0;
+           transition: all .1s ease-in;
+       }
+   
+       .card:hover {
+           top: -2px;
+           box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+       }
+   
+       .card article {
+           display: flex;
+           padding: 20px;
+           flex: 1;
+           justify-content: space-between;
+           flex-direction: column;
+           align-items: center;
+           
+       }
+   
+       .card .img {
+           padding-bottom: 153%;
+           background-size: cover;
+           background-position: center center;
+       }
+   
+       h1 {
+           font-size: 20px;
+           margin: 0;
+           text-align: center;
+           color: #333333;
+       }
+           
+       .button {
+           background: none;
+           border: 1px solid #000000;
+           color: #000000;
+           border-radius: 3px;
+           padding: 9px;
+           font-weight: bold;
+           margin: 12px 0px 0px 0px;
+           width:100%;
+           cursor: pointer;
+       }
+
+
+       .button:hover{
+           
+       }
+       .seat-btn-bg{
+           position: absolute;
+           background-color: white;
+           opacity: 0.85;
+           height: 100%;
+           margin: auto;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+
+       .set-btn-container{
+           margin: 20px;
+       }
+
+   </style>
+</head>
+
+   <body>
+
+       <div class="band">
+           <div class="item-1">
+               <div class="card">
+                   <div class="img" style="background-image: url(images/1.jpg);"></div>
+                   <article>
+                       <h1>Thor</h1>
+                       <button class="button">Buy seat</button>
+                   </article>
+                   <div class="seat-btn-bg">
+                       <div class="set-btn-container">
+                           <button class="button">Normal seat: 1.99 USD</button>
+                           <button class="button">Superior seat: 2.99 USD</buttonn>
+                           <button class="button">Sofa seat: 5.99 USD</buttonn>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="item-2">
+               <div class="card">
+                   <div class="img" style="background-image: url(images/2.jpg);"></div>
+                   <article>
+                       <h1>Wonder woman</h1>
+                       <button class="button">Buy seat</button>
+                   </article>                
+               </div>
+           </div>
+           <div class="item-3">
+               <div class="card">
+                   <div class="img" style="background-image: url(images/3.jpg);"></div>
+                   <article>
+                       <h1>Logan</h1>
+                       <button class="button">Buy seat</button>
+                   </article>                  
+               </div>
+           </div>
+       
+           <div class="item-4">
+               <div class="card">
+                   <div class="img" style="background-image: url(images/4.jpg);"></div>
+                   <article>
+                       <h1>Despicable me 3</h1>
+                       <button class="button">Buy seat</button>
+                   </article>
+                   <div class="seat-btn-bg">
+                       <div class="set-btn-container">
+                           <button class="button">Normal seat: 1.99 USD</button>
+                           <button class="button">Superior seat: 2.99 USD</buttonn>
+                           <button class="button">Sofa seat: 5.99 USD</buttonn>
+                       </div>
+                   </div>  
+               </div>
+           </div>
+           <div class="item-5">
+               <div class="card">
+                   <div class="img" style="background-image: url(images/5.jpg);"></div>
+                   <article>
+                       <h1>Star war</h1>
+                       <button class="button">Buy seat</button>
+                   </article>
+               </div>
+           </div>
+           <div class="item-6">
+               <div class="card">
+               <div class="img" style="background-image: url(images/6.jpg);"></div>
+               <article>
+                   <h1>The karate kid</h1>
+                   <button class="button">Buy seat</button>
+               </article>
+           </div>
+           </div>
+           <div class="item-7">
+               <div class="card">
+               <div class="img" style="background-image: url(images/7.jpg);"></div>
+               <article>
+                   <h1>John wick</h1>
+                   <button class="button">Buy seat</button>
+               </article>
+           </div>
+           </div>
+               
+   </body>
+</html>
