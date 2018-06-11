@@ -2,37 +2,37 @@
   "movies": [
     {
       "id": 1,
-      "name": "Baan Kru Noi",
-      "image": "baan-kru-noi.jpg",
+      "title": "Thor",
+      "image": "1.jpg",
       "price": 1,
       "currency": "THB"
     },
     {
       "id": 2,
-      "name": "Habitat for Humanity Thailand",
+      "title": "Wonder woman",
       "price": 1,
-      "image": "habitat-for-humanity-thailand.jpg",
+      "image": "2.jpg",
       "currency": "THB"
     },
     {
       "id": 3,
-      "name": "Paper Ranger",
+      "title": "Logan",
       "price": 1,
-      "image": "paper-ranger.jpg",
+      "image": "3.jpg",
       "currency": "THB"
     },
     {
       "id": 4,
-      "name": "Makhampom Theater",
+      "title": "Despicable me 3",
       "price": 1,
-      "image": "makhampom-theater.jpg",
+      "image": "4.jpg",
       "currency": "THB"
     },
     {
       "id": 5,
-      "name": "Thailand Association of the Blind",
+      "title": "Star war",
       "price": 1,
-      "image": "thailand-association-of-the-blind.jpg",
+      "image": "5.jpg",
       "currency": "THB"
     }
   ],

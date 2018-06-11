@@ -27,23 +27,18 @@ export default connect((state) => state)(
     }
 
     render() {
-      const imgUrl1 = 'images/1.jpg';
-      const imgUrl2 = 'images/2.jpg';
 
-      // backgroundImage: 'url(' + imgUrl + ')',
-      // backgroundSize: 'cover',
-      // backgroundPosition: 'center center',
+      const cardList = this.state.movies.map(function (item, i) {
+        return (
 
-      return (
-        <div className="band">
-          <div className="item-1">
+          <div key={i} className="item-1">
             <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
+              <div className='img' style={{ backgroundImage: 'url(images/' + item.image + ')' }}></div>
               <article>
-                <h1>Thor</h1>
+                <h1>{item.title}</h1>
                 <button className="button">Buy seat</button>
               </article>
-              <div className="seat-btn-bg">
+              <div className="seat-btn-bg" >
                 <div className="set-btn-container">
                   <button className="button">Normal seat: 1.99 USD </button>
                   <button className="button">Superior seat: 2.99 USD </button>
@@ -52,66 +47,14 @@ export default connect((state) => state)(
               </div>
             </div>
           </div>
-          <div className="item-2">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl2 + ')' }}></div>
-              <article>
-                <h1>Wonder woman</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
-          <div className="item-3">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
-              <article>
-                <h1>Logan</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
 
-          <div className="item-4">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
-              <article>
-                <h1>Despicable me 3</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
+        );
+      });
 
-          <div className="item-5">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
-              <article>
-                <h1>Star war</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
-
-          <div className="item-6">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
-              <article>
-                <h1>The karate kid</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
-
-          <div className="item-7">
-            <div className="card">
-              <div className='img' style={{ backgroundImage: 'url(' + imgUrl1 + ')' }}></div>
-              <article>
-                <h1>John wick</h1>
-                <button className="button">Buy seat</button>
-              </article>
-            </div>
-          </div>
+      return (
+        <div className="band">
+          {cardList}
         </div>
-
       );
     }
   },
