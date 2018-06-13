@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Close from '../cancel-button.svg';
-import BuyButton from './BuyButton';
+import Button from './Button';
 
 class SelectSeat extends React.Component {
 
@@ -20,9 +20,9 @@ class SelectSeat extends React.Component {
       const type = elem[0];
       const price = elem[1];
       return (
-        <BuyButton key={type} handleBuy={() => { handleBuy({ movieId, currency, price }) }}>
+        <Button key={type} handleBuy={() => { handleBuy({ movieId, currency, price }) }}>
           {type} seat: {price} {currency}
-        </BuyButton>
+        </Button>
       )
     });
 

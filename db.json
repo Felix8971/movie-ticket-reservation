@@ -140,6 +140,30 @@
       "price": 2.99,
       "currency": "THB",
       "id": 14
+    },
+    {
+      "movieId": 2,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 15
+    },
+    {
+      "movieId": 1,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 16
+    },
+    {
+      "movieId": 1,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 17
+    },
+    {
+      "movieId": 1,
+      "price": 5.99,
+      "currency": "THB",
+      "id": 18
     }
   ]
 }

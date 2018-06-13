@@ -13,6 +13,46 @@ html {
     grid-template-rows: auto;
     grid-gap: 20px;
 
+    .button {
+        background: white;
+        border: 2px solid #000000;
+        color: #000000;
+        border-radius: 25px;
+        padding: 9px;
+        font-weight: bold;
+        margin: 12px 0px 0px 0px;
+        width:100%;
+        cursor: pointer;
+    }
+
+    .bg-modal {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index:1000;
+      
+      .modal-content{
+        position:fixed;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        box-shadow:0 5px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+        background-color: white;
+        width:250px;
+        height:120px;
+        left:50%;
+        top:50%;
+        margin-left:-125px;
+        margin-top:-60px;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
     .card {
         min-height: 100%;
         background: white;
@@ -53,19 +93,6 @@ html {
             color: #333333;
         }
             
-        .button {
-            background: white;
-            border: 2px solid #000000;
-            color: #000000;
-            border-radius: 25px;
-            padding: 9px;
-            font-weight: bold;
-            margin: 12px 0px 0px 0px;
-            width:100%;
-            cursor: pointer;
-        }
-
-
         .seat-btn-bg{
             position: absolute;
             background-color: rgba(255, 255, 255, 0.7);

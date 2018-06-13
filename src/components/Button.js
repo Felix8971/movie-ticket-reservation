@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class BuyButton extends React.Component {
+class Button extends React.Component {
   render() {
     return (
       <button className="button" onClick={() => { this.props.handleBuy() }}>{this.props.children}</button>
@@ -10,8 +10,8 @@ class BuyButton extends React.Component {
   }
 }
 
-BuyButton.propTypes = {
+Button.propTypes = {
   handleBuy: PropTypes.func,    
 }
 
-export default BuyButton;
+export default Button;
