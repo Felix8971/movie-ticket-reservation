@@ -16,7 +16,7 @@ class Modal extends React.Component {
       <div className='bg-modal' >
         <div className='modal-content'>
           <p>{this.props.msg}</p>
-          <Button handleBuy={this.props.onCloseModal}>
+          <Button handleClick={this.props.onCloseModal}>
             Close
           </Button>
         </div>

@@ -13,6 +13,7 @@ class SelectSeat extends React.Component {
     const handleBuy = this.props.handleBuy;
     const currency = this.props.item.currency;
     const movieId = this.props.item.id;
+    const title = this.props.item.title;
     const prices = this.props.item.prices;
 
     const buttons = Object.entries(prices).map((elem) => {
@@ -20,7 +21,7 @@ class SelectSeat extends React.Component {
       const type = elem[0];
       const price = elem[1];
       return (
-        <Button key={type} handleBuy={() => { handleBuy({ movieId, currency, price }) }}>
+        <Button key={type} handleClick={() => { handleBuy({ movieId, title, currency, price }) }}>
           {type} seat: {price} {currency}
         </Button>
       )

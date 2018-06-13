@@ -3,4 +3,7 @@ export const seats = id => ({
   id,
 });
 
-
+export const transactionModal = message => ({
+  type: 'OPEN_TRANSACTION_MODAL',
+  message,
+});
