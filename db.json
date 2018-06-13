@@ -5,50 +5,58 @@
       "title": "Thor",
       "image": "1.jpg",
       "price": 1,
-      "currency": "THB"
+      "currency": "THB",
+      "normal": 1.99,
+      "superior": 2.99,
+      "sofa": 5.99
     },
     {
       "id": 2,
       "title": "Wonder woman",
       "price": 1,
       "image": "2.jpg",
-      "currency": "THB"
+      "currency": "THB",
+      "normal": 1.99,
+      "superior": 2.99,
+      "sofa": 5.99
     },
     {
       "id": 3,
       "title": "Logan",
       "price": 1,
       "image": "3.jpg",
-      "currency": "THB"
+      "currency": "THB",
+      "normal": 1.99,
+      "superior": 2.99,
+      "sofa": 5.99
     },
     {
       "id": 4,
       "title": "Despicable me 3",
       "price": 1,
       "image": "4.jpg",
-      "currency": "THB"
+      "currency": "THB",
+      "normal": 1.99,
+      "superior": 2.99,
+      "sofa": 5.99
     },
     {
       "id": 5,
       "title": "Star war",
       "price": 1,
       "image": "5.jpg",
-      "currency": "THB"
+      "currency": "THB",
+      "normal": 1.99,
+      "superior": 2.99,
+      "sofa": 5.99
     }
   ],
   "transactions": [
     {
-      "movieId": 2,
-      "amount": 10,
+      "movieId": 5,
+      "price": 1,
       "currency": "THB",
       "id": 1
-    },
-   
-    {
-      "movieId": 1,
-      "amount": 10,
-      "currency": "THB",
-      "id": 25
     }
   ]
 }
