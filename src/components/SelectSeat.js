@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Close from '../cancel-button.svg';
+import BuyButton from './BuyButton';
 
 class SelectSeat extends React.Component {
 
@@ -9,19 +11,27 @@ class SelectSeat extends React.Component {
     }
 
     const handleBuy = this.props.handleBuy;
+    const currency = this.props.item.currency;
+    const movieId = this.props.item.id;
+    const prices = this.props.item.prices;
 
-    const data = {
-      movieId: this.props.item.id,
-      price: this.props.item.price, 
-      currency: this.props.item.currency,
-    };
+    const buttons = Object.entries(prices).map((elem) => {
+      console.log(elem);
+      const type = elem[0];
+      const price = elem[1];
+      return (
+        <BuyButton key={type} handleBuy={() => { handleBuy({ movieId, currency, price }) }}>
+          {type} seat: {price} {currency}
+        </BuyButton>
+      )
+    });
+
 
     return (
       <div className="seat-btn-bg" >
+        <Close className="closeBtn" width={40} height={40} onClick={this.props.handleClose} />
         <div className="seat-btn-container">
-          <button className="button" onClick={() => { handleBuy(data) }}>Normal seat: 1.99 USD </button>
-          <button className="button" >Superior seat: 2.99 USD </button>
-          <button className="button">Sofa seat: 5.99 USD </button>
+          {buttons}
         </div>
       </div>
     )
@@ -29,8 +39,9 @@ class SelectSeat extends React.Component {
 }
 
 SelectSeat.propTypes = {
-  //   onClick: PropTypes.func.isRequired,
-  //   completed: PropTypes.bool.isRequired,
+  handleBuy: PropTypes.func.isRequired,
+  item: PropTypes.object.isRequired,
+  handleClose:PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired,
 }
 

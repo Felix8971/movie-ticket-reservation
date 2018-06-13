@@ -4,59 +4,142 @@
       "id": 1,
       "title": "Thor",
       "image": "1.jpg",
-      "price": 1,
       "currency": "THB",
-      "normal": 1.99,
-      "superior": 2.99,
-      "sofa": 5.99
+      "prices": {
+        "normal": 1.99,
+        "superior": 2.99,
+        "sofa": 5.99
+      }
     },
     {
       "id": 2,
       "title": "Wonder woman",
-      "price": 1,
       "image": "2.jpg",
       "currency": "THB",
-      "normal": 1.99,
-      "superior": 2.99,
-      "sofa": 5.99
+      "prices": {
+        "normal": 1.99,
+        "superior": 2.99,
+        "sofa": 5.99
+      }
     },
     {
       "id": 3,
       "title": "Logan",
-      "price": 1,
       "image": "3.jpg",
       "currency": "THB",
-      "normal": 1.99,
-      "superior": 2.99,
-      "sofa": 5.99
+      "prices": {
+        "normal": 1.99,
+        "superior": 2.99,
+        "sofa": 5.99
+      }
     },
     {
       "id": 4,
       "title": "Despicable me 3",
-      "price": 1,
       "image": "4.jpg",
       "currency": "THB",
-      "normal": 1.99,
-      "superior": 2.99,
-      "sofa": 5.99
+      "prices": {
+        "normal": 1.99,
+        "superior": 2.99,
+        "sofa": 5.99
+      }
     },
     {
       "id": 5,
       "title": "Star war",
-      "price": 1,
       "image": "5.jpg",
       "currency": "THB",
-      "normal": 1.99,
-      "superior": 2.99,
-      "sofa": 5.99
+      "prices": {
+        "normal": 1.99,
+        "superior": 2.99,
+        "sofa": 5.99
+      }
     }
   ],
   "transactions": [
     {
-      "movieId": 5,
-      "price": 1,
+      "movieId": 2,
+      "price": 5.99,
       "currency": "THB",
       "id": 1
+    },
+    {
+      "movieId": 1,
+      "price": 1.99,
+      "currency": "THB",
+      "id": 2
+    },
+    {
+      "movieId": 2,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 3
+    },
+    {
+      "movieId": 1,
+      "price": 5.99,
+      "currency": "THB",
+      "id": 4
+    },
+    {
+      "movieId": 1,
+      "price": 1.99,
+      "currency": "THB",
+      "id": 5
+    },
+    {
+      "movieId": 1,
+      "price": 5.99,
+      "currency": "THB",
+      "id": 6
+    },
+    {
+      "movieId": 1,
+      "price": 5.99,
+      "currency": "THB",
+      "id": 7
+    },
+    {
+      "movieId": 1,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 8
+    },
+    {
+      "movieId": 1,
+      "price": 1.99,
+      "currency": "THB",
+      "id": 9
+    },
+    {
+      "movieId": 1,
+      "price": 1.99,
+      "currency": "THB",
+      "id": 10
+    },
+    {
+      "movieId": 2,
+      "price": 1.99,
+      "currency": "THB",
+      "id": 11
+    },
+    {
+      "movieId": 3,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 12
+    },
+    {
+      "movieId": 3,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 13
+    },
+    {
+      "movieId": 2,
+      "price": 2.99,
+      "currency": "THB",
+      "id": 14
     }
   ]
 }

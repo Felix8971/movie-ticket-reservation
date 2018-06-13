@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import styled , { injectGlobal } from 'styled-components';
 import fetch from 'isomorphic-fetch';
-import './style.scss'
-import SelectSeat from './components/SelectSeat'
-import { seats } from './actions'
+import '../style.scss'
+import SelectSeat from './SelectSeat'
+import { seats } from '../actions'
+import Modal from './Modal'
 
 
 class App extends Component {
@@ -12,17 +13,36 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
-      //seats: 0,//{ open: false, id: null },
-      // modalTransaction: { open: false, data: {} },
-      // detailsMovie: { open: false, id: null },
     };
     this.handleBuy = this.handleBuy.bind(this);
+    this.handleCloseSeats = this.handleCloseSeats.bind(this);
   }
 
-  handleBuy(data) {
-   
+  componentDidMount() {
     const self = this;
-    
+    fetch('http://localhost:3001/movies')
+      .then(function (resp) { return resp.json(); })
+      .then(function (data) {
+        //this.props.dispatch({type:'MOVIE_UPDATE', movies:data})
+        self.setState({ movies: data })
+      });
+  }
+
+  handleCloseSeats() {
+    this.props.dispatch(seats(null));
+    this.props.dispatch({
+      type: 'OPEN_TRANSACTION_MODAL',
+      message: '',
+    });
+  }
+
+  // onCloseModal(){
+  //   this.props.dispatch(seats(null))
+  // }
+
+  handleBuy(data) {
+    const self = this;
+   
     fetch('http://localhost:3001/transactions', {
       method: 'POST',
       headers: {
@@ -39,28 +59,17 @@ class App extends Component {
           message: `Reservation faite ${data.price} !`,
         });
       });
-    
-    //this.props.dispatch({ type: 'OPEN_TRANSACTION_MODAL', id: 1111 })
-  }
-
-  componentDidMount() {
-    const self = this;
-    fetch('http://localhost:3001/movies')
-      .then(function (resp) { return resp.json(); })
-      .then(function (data) {
-        //this.props.dispatch({type:'MOVIE_UPDATE', movies:data})
-        self.setState({ movies: data })
-      });
-    //setTimeout(() => { this.props.dispatch({ type: 'OPEN_SEAT_MODAL', id: 2 }) }, 2000);
   }
 
 
   render() {
     const self = this;
-    console.log(this);
+    console.log('this=',this);
     console.log('this.state=', this.state);
     const activeSeatModal = this.props.activeSeatModal;
     const activeTransactionModal = this.props.activeTransactionModal;
+
+    console.log('activeTransactionModal=', activeTransactionModal);
 
     const cardList = this.state.movies.map(function (item, i) {
       return (
@@ -74,7 +83,12 @@ class App extends Component {
               }}>Buy seat</button>
             </article>
 
-            <SelectSeat show={i == activeSeatModal} handleBuy={self.handleBuy} item={item} />
+            <SelectSeat
+              show={i == activeSeatModal}
+              handleClose={self.handleCloseSeats}
+              handleBuy={self.handleBuy}
+              item={item}
+            />
           </div>
         </div>
 
@@ -83,11 +97,13 @@ class App extends Component {
 
     return (
       <div className="band" >
+        <Modal show={activeTransactionModal} msg={'Hi !'} 
+          onCloseModal={this.handleCloseSeats}>
+        </Modal>
         {cardList}
       </div>
     );
   }
 }
-
 
 export default connect((state) => state)(App);
