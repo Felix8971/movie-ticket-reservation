@@ -56,7 +56,7 @@ class App extends Component {
 
         self.props.dispatch({
           type: 'OPEN_TRANSACTION_MODAL',
-          message: `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more details.`,
+          message: `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`,
         });
       })
       .catch(function(error) {

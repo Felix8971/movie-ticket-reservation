@@ -24,15 +24,6 @@ const activeTransactionModal = (state = null, action) => {
   }
 }
 
-// const activeTransactionModal = (state = null, action) => {
-//   switch (action.type) {
-//     case 'UPDATE_TRANSACTION':
-//       return action.id
-//     default:
-//       return state
-//   }
-// }
-
 const activeDetailsModal = (state = null, action) => {
   switch (action.type) {
     case 'OPEN_DETAILS_MODAL':

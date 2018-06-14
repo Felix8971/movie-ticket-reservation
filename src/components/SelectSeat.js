@@ -27,7 +27,6 @@ class SelectSeat extends React.Component {
       )
     });
 
-
     return (
       <div className="seat-btn-bg" >
         <Close className="closeBtn" width={40} height={40} onClick={this.props.handleClose} />

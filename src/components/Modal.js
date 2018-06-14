@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 //import styled from 'styled-components';
 import Button from './Button';
 
@@ -23,6 +23,11 @@ class Modal extends React.Component {
       </div>
     );
   }
+}
+
+Modal.propTypes = {
+  onCloseModal: PropTypes.func.isRequired,    
+  msg: PropTypes.string,
 }
 
 export default Modal;
