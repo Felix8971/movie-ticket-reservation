@@ -1,6 +1,5 @@
 import * as actions from './index'
 
-
 describe('todo actions', () => {
   it('seats should create ADD_OPEN_SEAT_MODALTODO action', () => {
     expect(actions.seats(1)).toEqual({

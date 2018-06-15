@@ -1,8 +1,5 @@
 import index from './index'
 
-
-//console.log("Value=",index(obj1,{ type: 'OPEN_SEAT_MODAL', id: 1 }).activeSeatModal);
-
 describe('Reducer', () => {
     
     it('should handle initial state undefined', () => {

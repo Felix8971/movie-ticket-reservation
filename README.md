@@ -13,3 +13,7 @@ A simple movie ticket reservation app with react and redux
 4. run `yarn server` in a terminal to launch the json-server (http://localhost:3001/movies)
 5. run `yarn client` in another terminal to launch webpack-dev-server (http://localhost:3000)
 5. visit <http://localhost:3000/> 
+
+### tests 
+
+1. rue `yarn test` 

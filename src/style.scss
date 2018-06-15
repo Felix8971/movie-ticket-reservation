@@ -8,8 +8,6 @@ html {
     }
 }
 
-
-
 .band {
     width: 90%;
     max-width: 1240px;
@@ -96,6 +94,7 @@ html {
             padding-bottom: 153%;
             background-size: cover;
             background-position: center center;
+            opacity:0;//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
 
         .movie-title {
