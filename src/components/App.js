@@ -9,6 +9,7 @@ import Button from './Button';
 import SelectSeat from './SelectSeat'
 import { getMovies, transaction } from '../helpers'
 
+
 class App extends Component {
   constructor(props) {
     super();
@@ -28,17 +29,18 @@ class App extends Component {
     this.props.dispatch(transactionModal(''));
   }
 
-  handleBuy(data) { 
-    transaction(this, data);
+  handleBuy(data) {
+    transaction(this, data)
   }
+
 
   render() {
     const self = this;
-    const activeSeatModal = this.props.activeSeatModal;
-    const activeTransactionModal = this.props.activeTransactionModal;
-    
     console.log('this=', this);
     console.log('this.state=', this.state);
+    const activeSeatModal = this.props.activeSeatModal;
+    const activeTransactionModal = this.props.activeTransactionModal;
+
     console.log('activeTransactionModal=', activeTransactionModal);
 
     //The number of movie available in a cinema is limited (< 30) so we don't need to implement a pagination system
