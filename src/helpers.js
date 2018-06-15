@@ -7,6 +7,12 @@ export const getMovies = (self, id = '') => {
     .then(function (resp) { return resp.json(); })
     .then(function (data) {
       if ( self ) {
+        //I add a booked property, it will tell us if the movie has been booked
+        const newData = data.map((elem) => {
+          elem.booked = false;
+          return elem;
+        });
+        console.log('data=',newData);
         self.setState({ movies: data });
       }
     })
@@ -22,6 +28,15 @@ export const getMovies = (self, id = '') => {
         });
       }
     })
+
+  // fetch(url + '/transactions/3', {
+  //   method: 'DELETE',
+  //   headers: {
+  //     Accept: 'application/json',
+  //     'Content-Type': 'application/json',
+  //   },
+  // })
+
 }
 
 export const transaction = (self, data) => { 
@@ -39,6 +54,11 @@ export const transaction = (self, data) => {
         type: 'OPEN_TRANSACTION_MODAL',
         message: `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`,
       });
+
+      self.props.dispatch({
+        type: 'BOOK_MOVIE',
+        id: data.movieId-1
+      })
     })
     .catch(function(error) {
       self.props.dispatch({

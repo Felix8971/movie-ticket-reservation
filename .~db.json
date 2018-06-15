@@ -127,6 +127,13 @@
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 3
+    },
+    {
+      "movieId": 2,
+      "price": 1.99,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 4
     }
   ]
 }

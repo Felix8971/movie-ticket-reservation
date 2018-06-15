@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Close from '../cancel-button.svg';
 import Button from './Button';
 
+const userId = 'he6fe54u4s56o71d36z51no';
+
 class SelectSeat extends React.Component {
 
   render() {
@@ -21,7 +23,7 @@ class SelectSeat extends React.Component {
       const type = elem[0];
       const price = elem[1];
       return (
-        <Button key={type} handleClick={() => { handleBuy({ movieId, title, currency, price }) }}>
+        <Button key={type} handleClick={() => { handleBuy({ movieId, title, currency, price, userId }) }}>
           {type} seat: {price} {currency}
         </Button>
       )
@@ -29,7 +31,7 @@ class SelectSeat extends React.Component {
 
     return (
       <div className="seat-btn-bg" >
-        <Close className="closeBtn" width={40} height={40} onClick={this.props.handleClose} />
+        <Close className="close-btn" width={40} height={40} onClick={this.props.handleClose} />
         <div className="seat-btn-container">
           {buttons}
         </div>

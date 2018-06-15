@@ -94,7 +94,7 @@ html {
             padding-bottom: 153%;
             background-size: cover;
             background-position: center center;
-            opacity:0;
+            opacity:1;
         }
 
         .movie-title {
@@ -117,7 +117,7 @@ html {
             .seat-btn-container{
                 margin: 20px;
             }
-            .closeBtn{
+            .close-btn{
                 position:absolute;
                 top: 10px;
                 right:10px;
