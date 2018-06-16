@@ -21,7 +21,7 @@ describe('Modal', () => {
 
     it('should not render', () => {
       const tree = shallow(
-        <Modal show={false} msg={"Success!"} onCloseModal={()=>{}} />
+        <Modal msg={""} onCloseModal={()=>{}} />
       );
       expect(tree.find('div')).toHaveLength(0);
     });
@@ -29,7 +29,7 @@ describe('Modal', () => {
     const mockFn = jest.fn();
     it('should contain a button', () => {
       const tree = shallow(
-        <Modal show={true} msg={"Success!"} onCloseModal={mockFn} />
+        <Modal msg={"hey!"} onCloseModal={mockFn} />
       );
       expect(tree.find(Button)).toHaveLength(1);
     })
