@@ -36,13 +36,13 @@ const config = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader'
       },
-      /*{
+      {
         test: /\.js$/,
         exclude: [/node_modules/],
         use: {
           loader: 'eslint-loader',
         },
-      },*/
+      },
       {
         test: /\.svg$/,
         use: [

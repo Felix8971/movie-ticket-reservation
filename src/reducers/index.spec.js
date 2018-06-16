@@ -18,7 +18,7 @@ describe('Reducer', () => {
 
     it('should handle activeDetailsModal', () => {
         let obj1 =  {activeDetailsModal:null};
-        expect(index(obj1,{ type: 'OPEN_DETAILS_MODAL', id:1 }).activeDetailsModal).toEqual(1)
+        expect(index(obj1,{ type: 'OPEN_DETAILS_MODAL', data:{} }).activeDetailsModal).toEqual({})
     }) 
 
 })

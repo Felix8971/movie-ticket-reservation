@@ -1,42 +1,34 @@
 
 import fetch from 'isomorphic-fetch';
+import {/* seats, */ transactionModal, updateMoviesAction , bookMovieAction } from './actions'
 const url = 'http://localhost:3001';
 
+
 export const getMovies = (self, id = '') => { 
+
   fetch(url + '/movies/' + id) 
     .then(function (resp) { return resp.json(); })
     .then(function (data) {
-      if ( self ) {
-        //I add a booked property, it will tell us if the movie has been booked
-        const newData = data.map((elem) => {
-          elem.booked = false;
-          return elem;
-        });
-        console.log('data=',newData);
-        self.setState({ movies: data });
-      }
-    })
-    .then(function (data) {
-      //callback();
-      return data;
+      //I add a booked property, it will tell us if the movie has been booked
+      //if so we'll add an icon "booked" and remove the "buy seat" button"
+      const movies = data.map((elem) => {
+        elem.booked = false;
+        return elem;
+      });
+      self.props.dispatch(updateMoviesAction(movies));
+
+      //todo: check the transaction's list and maj the movies already booked by the user  
+      // fetch(url + '/transactions')
+      // .then(function (resp) { return resp.json(); })
+      // .then(function (transac) {
+      // });
+
     })
     .catch(function(error) {
       if ( self ) { 
-        self.props.dispatch({
-          type: 'OPEN_TRANSACTION_MODAL',
-          message: 'Sorry an error occurred !',
-        });
+        self.props.dispatch(transactionModal('Sorry an error occurred !'));
       }
-    })
-
-  // fetch(url + '/transactions/3', {
-  //   method: 'DELETE',
-  //   headers: {
-  //     Accept: 'application/json',
-  //     'Content-Type': 'application/json',
-  //   },
-  // })
-
+    });  
 }
 
 export const transaction = (self, data) => { 
@@ -50,20 +42,11 @@ export const transaction = (self, data) => {
   })
     .then(function (resp) { return resp.json(); })
     .then(function () {
-      self.props.dispatch({
-        type: 'OPEN_TRANSACTION_MODAL',
-        message: `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`,
-      });
-
-      self.props.dispatch({
-        type: 'BOOK_MOVIE',
-        id: data.movieId-1
-      })
+      const msg = `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`;
+      self.props.dispatch(transactionModal(msg));
+      self.props.dispatch(bookMovieAction(data.movieId-1));
     })
     .catch(function(error) {
-      self.props.dispatch({
-        type: 'OPEN_TRANSACTION_MODAL',
-        message: 'Sorry an error occurred !',
-      });
+      self.props.dispatch(transactionModal('Sorry an error occurred !'));
     });
 }

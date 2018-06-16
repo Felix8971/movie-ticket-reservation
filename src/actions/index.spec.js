@@ -14,6 +14,20 @@ describe('todo actions', () => {
       message: "Transaction done!",
     })
   })
-  
+
+  it('updateMoviesAction should create GET_MOVIES action', () => {
+    expect(actions.updateMoviesAction([])).toEqual({
+      type: 'GET_MOVIES',
+      data: [],
+    })
+  })  
+
+  it('bookMovieAction should create BOOK_MOVIE action', () => {
+    expect(actions.bookMovieAction(1)).toEqual({
+      type: 'BOOK_MOVIE',
+      id: 1,
+    })
+  })  
+
 })
 

@@ -10,9 +10,9 @@
       "plot": "Thor is imprisoned on the planet Sakaar, and must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -25,9 +25,9 @@
       "image": "2.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -40,9 +40,9 @@
       "image": "3.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -55,9 +55,9 @@
       "image": "4.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -70,9 +70,9 @@
       "image": "5.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -85,9 +85,9 @@
       "image": "6.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     },
     {
@@ -100,33 +100,180 @@
       "image": "7.jpg",
       "currency": "THB",
       "prices": {
-        "normal": 1.99,
-        "superior": 2.99,
-        "sofa": 5.99
+        "normal": 200,
+        "superior": 300,
+        "sofa": 600
       }
     }
   ],
   "transactions": [
     {
       "movieId": 2,
-      "price": 1.99,
+      "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 1
     },
     {
       "movieId": 4,
-      "price": 1.99,
+      "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 2
     },
     {
       "movieId": 1,
-      "price": 1.99,
+      "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 3
+    },
+    {
+      "movieId": 4,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 4
+    },
+    {
+      "movieId": 2,
+      "price": 600,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 5
+    },
+    {
+      "movieId": 1,
+      "price": 300,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 6
+    },
+    {
+      "movieId": 1,
+      "price": 600,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 7
+    },
+    {
+      "movieId": 2,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 8
+    },
+    {
+      "movieId": 1,
+      "price": 600,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 9
+    },
+    {
+      "movieId": 3,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 10
+    },
+    {
+      "movieId": 3,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 11
+    },
+    {
+      "movieId": 3,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 12
+    },
+    {
+      "movieId": 2,
+      "price": 300,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 13
+    },
+    {
+      "movieId": 2,
+      "price": 300,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 14
+    },
+    {
+      "movieId": 3,
+      "price": 300,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 15
+    },
+    {
+      "movieId": 4,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 16
+    },
+    {
+      "movieId": 7,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 17
+    },
+    {
+      "movieId": 4,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 18
+    },
+    {
+      "movieId": 2,
+      "price": 600,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 19
+    },
+    {
+      "movieId": 2,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 20
+    },
+    {
+      "movieId": 1,
+      "price": 600,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 21
+    },
+    {
+      "movieId": 2,
+      "price": 300,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 22
+    },
+    {
+      "movieId": 3,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 23
+    },
+    {
+      "movieId": 2,
+      "price": 200,
+      "currency": "THB",
+      "userId": "he6fe54u4s56o71d36z51no",
+      "id": 24
     }
   ]
 }

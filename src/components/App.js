@@ -1,49 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import styled , { injectGlobal } from 'styled-components';
-import fetch from 'isomorphic-fetch';
-import '../style.scss'
-import { seats, transactionModal, updateMoviesAction, bookMovieAction } from '../actions'
-import Modal from './Modal'
+//import fetch from 'isomorphic-fetch';
+import '../style.scss';
+import { seats, transactionModal, detailsModal /*,updateMoviesAction , bookMovieAction*/ } from '../actions';
+import Modal from './Modal';
+import Details from './Details';
 import Button from './Button';
 import SelectSeat from './SelectSeat'
-import { getMovies, transaction } from '../helpers'
+import { getMovies, transaction } from '../helpers';
 
 class App extends Component {
   constructor(props) {
     super();
-    // this.state = {
-    //   _movies: [],
-    // };
     this.handleBuy = this.handleBuy.bind(this);
+    this.handleOpenDetails = this.handleOpenDetails.bind(this);
+    this.handleCloseDetails = this.handleCloseDetails.bind(this);
     this.handleCloseSeats = this.handleCloseSeats.bind(this);
   }
 
   componentDidMount() {
-    //getMovies(this);
-    const self = this;
-    fetch('http://localhost:3001/movies') 
-    .then(function (resp) { return resp.json(); })
-    .then(function (data) {
-        //I add a booked property, it will tell us if the movie has been booked
-        //if so we'll add an icon "booked" and remove the "buy seat" button"
-        const movies = data.map((elem) => {
-          elem.booked = false;
-          return elem;
-        });
-        self.props.dispatch(updateMoviesAction(movies));
-    })
-    
-  }
-
-
-  componentWillMount(){
-    
+    getMovies(this);//we add movies to the store 
   }
 
   handleCloseSeats() {
     this.props.dispatch(seats(null));
     this.props.dispatch(transactionModal(''));
+  }
+
+  handleCloseDetails() {
+    this.props.dispatch(detailsModal(null));
+  }
+
+  handleOpenDetails(data) {
+    this.props.dispatch(detailsModal(data));
   }
 
   handleBuy(data) {
@@ -53,29 +43,30 @@ class App extends Component {
 
   render() {
     const self = this;
-    console.log('this=', this);
-    console.log('this.state=', this.state);
     const activeSeatModal = this.props.activeSeatModal;
     const activeTransactionModal = this.props.activeTransactionModal;
+    const activeDetailsModal = this.props.activeDetailsModal;
 
+    console.log('this=', this);
+    console.log('this.state=', this.state);
     console.log('activeTransactionModal=', activeTransactionModal);
-    //setTimeout( ()=>{ self.props.dispatch(bookMovieAction(2)) },3000);
+
     //The number of movie available in a cinema is limited (< 30) so we don't need to implement a pagination system
     const cardList = this.props.moviesReducer.map(function (item, i) {
-      
+
       let button;
-      if ( !item.booked ){
+      if (!item.booked) {
         button = <Button className="button" handleClick={() => {
           self.props.dispatch(seats(i))
         }}>Buy seat</Button>
-      }else{
+      } else {
         button = <div>BOOKED!</div>
       }
-      
+
       return (
         <div key={i} className="item">
           <div className="card">
-            <div className="img" style={{ backgroundImage: 'url(images/' + item.image + ')' }}></div>
+            <div className="img" onClick={() => { self.handleOpenDetails(item) }} style={{ backgroundImage: 'url(images/' + item.image + ')' }}></div>
             <article>
               <h1 className="movie-title">{item.title}</h1>
               {button}
@@ -93,12 +84,15 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="title">Now Showing in Thailand</h1>  
+        <h1 className="title">Now Showing in Thailand</h1>
         <div className="band" >
           {cardList}
-          <Modal show={activeTransactionModal} msg={activeTransactionModal}
+          <Modal show={!!activeTransactionModal} msg={activeTransactionModal}
             onCloseModal={this.handleCloseSeats}>
           </Modal>
+          <Details show={!!activeDetailsModal} data={activeDetailsModal}
+            onCloseModal={this.handleCloseDetails} >
+          </Details>
         </div>
       </div>
     );
