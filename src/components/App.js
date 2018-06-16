@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import styled , { injectGlobal } from 'styled-components';
-//import fetch from 'isomorphic-fetch';
 import '../style.scss';
 import { seats, transactionModal, detailsModal /*,updateMoviesAction , bookMovieAction*/ } from '../actions';
 import NavBar from './NavBar';
@@ -61,7 +59,7 @@ class App extends Component {
           self.props.dispatch(seats(i))
         }}>Buy seat</Button>
       } else {
-        button = <div><i className="fas fa-loveseat"></i>BOOKED! </div>
+        button = <div><i className="fas fa-loveseat"></i>BOOKED!</div>
       }
 
       return (

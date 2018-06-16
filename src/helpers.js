@@ -3,13 +3,12 @@ import fetch from 'isomorphic-fetch';
 import {/* seats, */ transactionModal, updateMoviesAction , bookMovieAction } from './actions'
 const url = 'http://localhost:3001';
 
-
 export const getMovies = (self, id = '') => { 
 
   fetch(url + '/movies/' + id) 
     .then(function (resp) { return resp.json(); })
     .then(function (data) {
-      //I add a booked property, it will tell us if the movie has been booked
+      //We add a booked property, it will tell us if the movie has been booked
       //if so we'll add an icon "booked" and remove the "buy seat" button"
       const movies = data.map((elem) => {
         elem.booked = false;

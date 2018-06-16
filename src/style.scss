@@ -32,6 +32,9 @@ html {
         margin: 12px 0px 0px 0px;
         width:100%;
         cursor: pointer;
+        &:hover {
+            background: #ebe8e8;
+        }
     }
 
     .close-btn{
@@ -139,7 +142,6 @@ html {
       }
     }
 
-    
     .card {
         min-height: 100%;
         background: white;
@@ -246,7 +248,7 @@ html {
     }
 }
 
-
+//navbar
 nav {
 	background-color: black;
 	overflow: hidden;
@@ -256,19 +258,16 @@ nav {
 		color: white;
 	}
 
-	a:visited {
-		color: white;
-	}
-
 	.nav-wide {
 		display: none;
 		margin: 0 auto;
 		.wide {
 			text-align: center;
 			a {
-				text-decoration: none;
-				display: inline-block;
-				padding: 0 2em;
+			  text-decoration: none;
+			  display: inline-block;
+              padding: 0 2em;
+              font-weight: bold;
 			}
 		}
 	}
@@ -283,7 +282,6 @@ nav {
 
 		.narrow-links {
 			display: none;
-
 			a {
 				text-decoration: none;
 				display: block;

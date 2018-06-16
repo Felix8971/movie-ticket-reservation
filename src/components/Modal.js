@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import styled from 'styled-components';
 import Button from './Button';
 
 
 class Modal extends React.Component {
   render() {
 
-  // Render nothing if the "show" prop is false
+    // Render nothing if the msg prop is empty
     if (!this.props.msg) {
       return null;
     }

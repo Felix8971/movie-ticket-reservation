@@ -1,6 +1,5 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-//import { getMovies } from '../../helpers'
 
 let fetchData = () =>{ 
     return fetch('http://localhost:3001/movies/1') 

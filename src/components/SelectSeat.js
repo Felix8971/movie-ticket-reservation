@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Close from '../cancel-button.svg';
 import Button from './Button';
 
-const userId = 'he6fe54u4s56o71d36z51no';
+const userId = 'he6fe54u4s56o71d36z51no';//should be defined if the user register 
 
 class SelectSeat extends React.Component {
 

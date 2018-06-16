@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 //import styled from 'styled-components';
 import Close from '../cancel-button.svg';
 
@@ -18,7 +18,6 @@ class Details extends React.Component {
     );
     
     const data = this.props.data;
-
     const imgLarge = data.image.split('.')[0] + '_big.jpg';
 
     return (
@@ -39,9 +38,9 @@ class Details extends React.Component {
   }
 }
 
-//Details.propTypes = {
-//onCloseModal: PropTypes.func.isRequired,    
-//data: PropTypes.object.isRequired,
-//}
+Details.propTypes = {
+  onCloseModal: PropTypes.func.isRequired,    
+  data: PropTypes.object,
+}
 
 export default Details;

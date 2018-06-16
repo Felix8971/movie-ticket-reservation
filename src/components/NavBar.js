@@ -1,7 +1,4 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-
-
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -36,10 +33,6 @@ class NavBar extends React.Component {
     )
   }
 }
-
-// NavBar.propTypes = {
-//   handleClick: PropTypes.func,    
-// }
 
 export default NavBar;
 

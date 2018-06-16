@@ -14,7 +14,7 @@ describe('Modal', () => {
 
     it('should render correctly', () => {
       const tree = shallow(
-        <Modal show={true} msg={"Success!"} onCloseModal={()=>{}} />
+        <Modal msg={"Success!"} onCloseModal={()=>{}} />
       );
       expect(tree).toMatchSnapshot();
     });
