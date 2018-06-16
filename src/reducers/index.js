@@ -18,7 +18,7 @@ const activeTransactionModal = (state = null, action) => {
   }
 }
 
-const activeDetailsModal = (state = null, action) => {
+const detailsModalReducer = (state = null, action) => {
   switch (action.type) {
     case 'OPEN_DETAILS_MODAL':
       return action.data
@@ -43,7 +43,7 @@ const moviesReducer = (state = [], action) => {
 
 
 export default combineReducers({
-  activeDetailsModal,
+  detailsModalReducer,
   activeSeatModal,
   activeTransactionModal,
   moviesReducer,

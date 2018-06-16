@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 //import fetch from 'isomorphic-fetch';
 import '../style.scss';
 import { seats, transactionModal, detailsModal /*,updateMoviesAction , bookMovieAction*/ } from '../actions';
+import NavBar from './NavBar';
 import Modal from './Modal';
 import Details from './Details';
 import Button from './Button';
@@ -45,11 +46,11 @@ class App extends Component {
     const self = this;
     const activeSeatModal = this.props.activeSeatModal;
     const activeTransactionModal = this.props.activeTransactionModal;
-    const activeDetailsModal = this.props.activeDetailsModal;
+    const detailsModalData = this.props.detailsModalReducer;
 
     console.log('this=', this);
     console.log('this.state=', this.state);
-    console.log('activeTransactionModal=', activeTransactionModal);
+   
 
     //The number of movie available in a cinema is limited (< 30) so we don't need to implement a pagination system
     const cardList = this.props.moviesReducer.map(function (item, i) {
@@ -60,7 +61,7 @@ class App extends Component {
           self.props.dispatch(seats(i))
         }}>Buy seat</Button>
       } else {
-        button = <div>BOOKED!</div>
+        button = <div><i className="fas fa-loveseat"></i>BOOKED! </div>
       }
 
       return (
@@ -84,15 +85,12 @@ class App extends Component {
 
     return (
       <div>
+        <NavBar/>
         <h1 className="title">Now Showing in Thailand</h1>
         <div className="band" >
           {cardList}
-          <Modal show={!!activeTransactionModal} msg={activeTransactionModal}
-            onCloseModal={this.handleCloseSeats}>
-          </Modal>
-          <Details show={!!activeDetailsModal} data={activeDetailsModal}
-            onCloseModal={this.handleCloseDetails} >
-          </Details>
+          <Modal msg={activeTransactionModal} onCloseModal={this.handleCloseSeats} />
+          <Details data={detailsModalData} onCloseModal={this.handleCloseDetails} />
         </div>
       </div>
     );

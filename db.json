@@ -51,7 +51,7 @@
       "genre": "Action, Drama, Sci-Fi",
       "director": "James Mangold ",
       "stars": "Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook",
-      "plot": "In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan's attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.",
+      "plot": "Gru meets his long-lost charming, cheerful, and more successful twin brother Dru who wants to team up with him for one last criminal heist.",
       "image": "4.jpg",
       "currency": "THB",
       "prices": {
@@ -66,7 +66,7 @@
       "genre": "Action, Drama, Sci-Fi",
       "director": "James Mangold ",
       "stars": "Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook",
-      "plot": "In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan's attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.",
+      "plot": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.",
       "image": "5.jpg",
       "currency": "THB",
       "prices": {
@@ -81,7 +81,7 @@
       "genre": "Animation, Action, Adventure",
       "director": "Trish Sie",
       "stars": "Anna Kendrick, Rebel Wilson, Brittany Snow, Anna Camp",
-      "plot": "Following the events of the first film, Surly and his friends must stop Oakton City's mayor from destroying their home to make way for a dysfunctional amusement park.",
+      "plot": "Following their win at the world championship, the now separated Bellas reunite for one last singing competition at an overseas USO tour, but face a group who uses both instruments and voices.",
       "image": "6.jpg",
       "currency": "THB",
       "prices": {
@@ -108,172 +108,11 @@
   ],
   "transactions": [
     {
-      "movieId": 2,
+      "movieId": 3,
       "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 1
-    },
-    {
-      "movieId": 4,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 2
-    },
-    {
-      "movieId": 1,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 3
-    },
-    {
-      "movieId": 4,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 4
-    },
-    {
-      "movieId": 2,
-      "price": 600,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 5
-    },
-    {
-      "movieId": 1,
-      "price": 300,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 6
-    },
-    {
-      "movieId": 1,
-      "price": 600,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 7
-    },
-    {
-      "movieId": 2,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 8
-    },
-    {
-      "movieId": 1,
-      "price": 600,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 9
-    },
-    {
-      "movieId": 3,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 10
-    },
-    {
-      "movieId": 3,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 11
-    },
-    {
-      "movieId": 3,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 12
-    },
-    {
-      "movieId": 2,
-      "price": 300,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 13
-    },
-    {
-      "movieId": 2,
-      "price": 300,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 14
-    },
-    {
-      "movieId": 3,
-      "price": 300,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 15
-    },
-    {
-      "movieId": 4,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 16
-    },
-    {
-      "movieId": 7,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 17
-    },
-    {
-      "movieId": 4,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 18
-    },
-    {
-      "movieId": 2,
-      "price": 600,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 19
-    },
-    {
-      "movieId": 2,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 20
-    },
-    {
-      "movieId": 1,
-      "price": 600,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 21
-    },
-    {
-      "movieId": 2,
-      "price": 300,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 22
-    },
-    {
-      "movieId": 3,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 23
-    },
-    {
-      "movieId": 2,
-      "price": 200,
-      "currency": "THB",
-      "userId": "he6fe54u4s56o71d36z51no",
-      "id": 24
     }
   ]
 }

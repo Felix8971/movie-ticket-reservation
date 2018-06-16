@@ -16,9 +16,9 @@ describe('Reducer', () => {
         expect(index(obj1,{ type: 'OPEN_TRANSACTION_MODAL', message:"Hello" }).activeTransactionModal).toEqual("Hello")
     }) 
 
-    it('should handle activeDetailsModal', () => {
-        let obj1 =  {activeDetailsModal:null};
-        expect(index(obj1,{ type: 'OPEN_DETAILS_MODAL', data:{} }).activeDetailsModal).toEqual({})
+    it('should handle detailsModalReducer', () => {
+        let obj1 =  {detailsModalReducer:null};
+        expect(index(obj1,{ type: 'OPEN_DETAILS_MODAL', data:{} }).detailsModalReducer).toEqual({})
     }) 
 
 })
