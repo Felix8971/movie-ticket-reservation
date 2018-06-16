@@ -16,4 +16,4 @@ A simple movie ticket reservation app with react and redux
 
 ### tests 
 
-1. rue `yarn test` 
+1. run `yarn test` 
