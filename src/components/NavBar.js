@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//I use a class component because I need to add some logic inside (burgerToggle) 
 class NavBar extends React.Component {
   constructor(props) {
     super();

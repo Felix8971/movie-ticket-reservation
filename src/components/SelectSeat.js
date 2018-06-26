@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Close from '../cancel-button.svg';
 import Button from './Button';
+import {movieType} from './types';
 
-const userId = 'he6fe54u4s56o71d36z51no';//should be defined if the user register 
+const userId = 'he6fe54u4s56o71d36z51no';//should be defined if the user register somewhere
 
 class SelectSeat extends React.Component {
 
@@ -13,17 +14,20 @@ class SelectSeat extends React.Component {
     }
 
     const handleBuy = this.props.handleBuy;
-    const currency = this.props.item.currency;
-    const movieId = this.props.item.id;
-    const title = this.props.item.title;
-    const prices = this.props.item.prices;
+    // const currency = this.props.item.currency;
+    // const id = this.props.item.id;
+    // const title = this.props.item.title;
+    // const prices = this.props.item.prices;
+
+    //I can use object destructuring to write less code.
+    const {id, title, currency, prices} = this.props.item;
 
     const buttons = Object.entries(prices).map((elem) => {
-      console.log(elem);
+      //console.log(elem);
       const type = elem[0];
       const price = elem[1];
       return (
-        <Button key={type} handleClick={() => { handleBuy({ movieId, title, currency, price, userId }) }}>
+        <Button key={type} handleClick={() => { handleBuy({ id, title, currency, price, userId }) }}>
           {type} seat: {price} {currency}
         </Button>
       )
@@ -42,7 +46,7 @@ class SelectSeat extends React.Component {
 
 SelectSeat.propTypes = {
   handleBuy: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired,
+  item: movieType.isRequired,//I use centralized PropTypes define in ./types/index.js (DRY principle)
   handleClose:PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired,
 }

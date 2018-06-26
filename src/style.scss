@@ -13,6 +13,119 @@ html {
     padding: 0;
 }
 
+.bg-modal {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index:1000;
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+      
+    .modal-content{    
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: .25rem;
+      box-shadow:0 5px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      background-color: white;
+      width: 306px;
+      height: 115px;
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      align-items: center;
+      padding:20px;
+      animation-name: bounceIn;
+      animation-duration: .4s !important;
+      animation-fill-mode: both;
+      -webkit-animation-name: bounceIn;
+      -webkit-animation-duration: .4s !important;
+      -webkit-animation-fill-mode: both;
+    }
+
+    .detail-content {
+      position: fixed;
+      max-width:900px;  
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: .25rem;
+      box-shadow:0 5px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      background-color: white;
+      width: 80%;
+      display:flex;
+      flex-direction:row;
+      justify-content: center;
+      align-items: flex-start;
+      padding:20px;
+      .img-details {
+          width:50%;
+          border: 1px solid #dfdfdf;
+      }
+      .detail-list{
+          margin:5px 20px;
+          display: flex;
+          flex-direction: column;
+          width:50%;
+          justify-content: start;
+          h1{
+              font-size:2em;
+              margin-bottom: 10px;
+              text-transform: uppercase;
+              font-style: oblique;
+              color:#414141;
+          }
+          .movie-info{
+             
+              margin-bottom: 10px;
+              .name{
+                  font-size:1.3em;
+                  color: #444343;
+                  font-weight: bold;
+                  margin-right: 5px;
+              }
+              .value{
+                  font-size:1.3em;
+                  color:#444343;
+              }
+              .value-long{
+                  font-size:1.3em;
+                  color:#444343;
+                  overflow-y: scroll;
+                  height: 200px;
+              }
+          }
+          .plot-name{
+              margin-bottom: 10px;
+              font-size:1.3em;
+              color: #444343;
+              font-weight: bold;
+              margin-right: 5px;
+          }
+          .plot-value{
+              margin-bottom: 10px;
+              font-size:1.3em;
+              color:#444343;
+          }
+      }
+    }
+}
+
+.button {
+    background: white;
+    border: 2px solid #000000;
+    color: #000000;
+    border-radius: 25px;
+    padding: 9px;
+    font-weight: bold;
+    margin: 12px 0px 0px 0px;
+    width:100%;
+    cursor: pointer;
+    &:hover {
+        background: #ebe8e8;
+    }
+}
+
 .band {
     width: 90%;
     max-width: 1240px;
@@ -22,124 +135,13 @@ html {
     grid-template-rows: auto;
     grid-gap: 20px;
 
-    .button {
-        background: white;
-        border: 2px solid #000000;
-        color: #000000;
-        border-radius: 25px;
-        padding: 9px;
-        font-weight: bold;
-        margin: 12px 0px 0px 0px;
-        width:100%;
-        cursor: pointer;
-        &:hover {
-            background: #ebe8e8;
-        }
-    }
+
 
     .close-btn{
         position:absolute;
         top: 10px;
         right:10px;
         cursor: pointer;
-    }
-
-    .bg-modal {
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      min-height: 100vh;
-      background-color: rgba(255, 255, 255, 0.7);
-      z-index:1000;
-      display:flex;
-      justify-content: center;
-      align-items: center;  
-        
-      .modal-content{    
-        border: 1px solid rgba(0,0,0,.125);
-        border-radius: .25rem;
-        box-shadow:0 5px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-        background-color: white;
-        width: 306px;
-        height: 115px;
-        display:flex;
-        flex-direction:column;
-        justify-content: space-between;
-        align-items: center;
-        padding:20px;
-        animation-name: bounceIn;
-        animation-duration: .4s !important;
-        animation-fill-mode: both;
-        -webkit-animation-name: bounceIn;
-        -webkit-animation-duration: .4s !important;
-        -webkit-animation-fill-mode: both;
-      }
-
-      .detail-content {
-        position: fixed;
-        max-width:900px;  
-        border: 1px solid rgba(0,0,0,.125);
-        border-radius: .25rem;
-        box-shadow:0 5px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-        background-color: white;
-        width: 80%;
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
-        align-items: flex-start;
-        padding:20px;
-        .img-details {
-            width:50%;
-            border: 1px solid #dfdfdf;
-        }
-        .detail-list{
-            margin:5px 20px;
-            display: flex;
-            flex-direction: column;
-            width:50%;
-            justify-content: start;
-            h1{
-                font-size:2em;
-                margin-bottom: 10px;
-                text-transform: uppercase;
-                font-style: oblique;
-                color:#414141;
-            }
-            .movie-info{
-               
-                margin-bottom: 10px;
-                .name{
-                    font-size:1.3em;
-                    color: #444343;
-                    font-weight: bold;
-                    margin-right: 5px;
-                }
-                .value{
-                    font-size:1.3em;
-                    color:#444343;
-                }
-                .value-long{
-                    font-size:1.3em;
-                    color:#444343;
-                    overflow-y: scroll;
-                    height: 200px;
-                }
-            }
-            .plot-name{
-                margin-bottom: 10px;
-                font-size:1.3em;
-                color: #444343;
-                font-weight: bold;
-                margin-right: 5px;
-            }
-            .plot-value{
-                margin-bottom: 10px;
-                font-size:1.3em;
-                color:#444343;
-            }
-        }
-      }
     }
 
     .card {

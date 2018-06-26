@@ -37,13 +37,13 @@ export const transaction = (self, data) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: `{ "movieId": ${data.movieId}, "price": ${data.price}, "currency": "${data.currency}", "userId": "${data.userId}" }`,
+    body: `{ "movieId": ${data.id}, "price": ${data.price}, "currency": "${data.currency}", "userId": "${data.userId}" }`,
   })
     .then(function (resp) { return resp.json(); })
     .then(function () {
       const msg = `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`;
       self.props.dispatch(transactionModal(msg));
-      self.props.dispatch(bookMovieAction(data.movieId-1));
+      self.props.dispatch(bookMovieAction(data.id-1));
     })
     .catch(function(error) {
       self.props.dispatch(transactionModal('Sorry an error occurred !'));

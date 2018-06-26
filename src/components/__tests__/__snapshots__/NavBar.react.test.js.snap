@@ -1,0 +1,591 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NavBar />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="nav-wide"
+        >
+          <div
+            className="wide"
+          >
+            <a
+              href="#"
+            >
+              Cinema
+            </a>
+            <a
+              href="#"
+            >
+              Movies
+            </a>
+            <a
+              href="#"
+            >
+              News
+            </a>
+          </div>
+        </div>,
+        <div
+          className="nav-narrow"
+        >
+          <i
+            className="fa fa-bars fa-2x"
+            onClick={[Function]}
+          />
+          <div
+            className="narrow-links"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Cinema
+            </a>
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Movies
+            </a>
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              News
+            </a>
+          </div>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="wide"
+          >
+            <a
+              href="#"
+            >
+              Cinema
+            </a>
+            <a
+              href="#"
+            >
+              Movies
+            </a>
+            <a
+              href="#"
+            >
+              News
+            </a>
+          </div>,
+          "className": "nav-wide",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a
+                href="#"
+              >
+                Cinema
+              </a>,
+              <a
+                href="#"
+              >
+                Movies
+              </a>,
+              <a
+                href="#"
+              >
+                News
+              </a>,
+            ],
+            "className": "wide",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cinema",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "Cinema",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Movies",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "Movies",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "News",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "News",
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              className="fa fa-bars fa-2x"
+              onClick={[Function]}
+            />,
+            <div
+              className="narrow-links"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                Cinema
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                Movies
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                News
+              </a>
+            </div>,
+          ],
+          "className": "nav-narrow",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fa fa-bars fa-2x",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Cinema
+                </a>,
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Movies
+                </a>,
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  News
+                </a>,
+              ],
+              "className": "narrow-links",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cinema",
+                  "href": "#",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Cinema",
+                "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Movies",
+                  "href": "#",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Movies",
+                "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "News",
+                  "href": "#",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "News",
+                "type": "a",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="nav-wide"
+          >
+            <div
+              className="wide"
+            >
+              <a
+                href="#"
+              >
+                Cinema
+              </a>
+              <a
+                href="#"
+              >
+                Movies
+              </a>
+              <a
+                href="#"
+              >
+                News
+              </a>
+            </div>
+          </div>,
+          <div
+            className="nav-narrow"
+          >
+            <i
+              className="fa fa-bars fa-2x"
+              onClick={[Function]}
+            />
+            <div
+              className="narrow-links"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                Cinema
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                Movies
+              </a>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                News
+              </a>
+            </div>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="wide"
+            >
+              <a
+                href="#"
+              >
+                Cinema
+              </a>
+              <a
+                href="#"
+              >
+                Movies
+              </a>
+              <a
+                href="#"
+              >
+                News
+              </a>
+            </div>,
+            "className": "nav-wide",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <a
+                  href="#"
+                >
+                  Cinema
+                </a>,
+                <a
+                  href="#"
+                >
+                  Movies
+                </a>,
+                <a
+                  href="#"
+                >
+                  News
+                </a>,
+              ],
+              "className": "wide",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cinema",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "Cinema",
+                "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Movies",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "Movies",
+                "type": "a",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "News",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "News",
+                "type": "a",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="fa fa-bars fa-2x"
+                onClick={[Function]}
+              />,
+              <div
+                className="narrow-links"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Cinema
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Movies
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  News
+                </a>
+              </div>,
+            ],
+            "className": "nav-narrow",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-bars fa-2x",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Cinema
+                  </a>,
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Movies
+                  </a>,
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    News
+                  </a>,
+                ],
+                "className": "narrow-links",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cinema",
+                    "href": "#",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Cinema",
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Movies",
+                    "href": "#",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Movies",
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "News",
+                    "href": "#",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "News",
+                  "type": "a",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

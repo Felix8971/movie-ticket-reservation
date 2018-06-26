@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Modal
+    msg="Success!"
+    onCloseModal={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "$$typeof": Symbol(react.portal),
+    "children": <div
+      className="bg-modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <p>
+          Success!
+        </p>
+        <Button
+          handleClick={[Function]}
+        >
+          Close
+        </Button>
+      </div>
+    </div>,
+    "containerInfo": <div
+      id="modal-root"
+    />,
+    "implementation": null,
+    "key": null,
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "$$typeof": Symbol(react.portal),
+      "children": <div
+        className="bg-modal"
+      >
+        <div
+          className="modal-content"
+        >
+          <p>
+            Success!
+          </p>
+          <Button
+            handleClick={[Function]}
+          >
+            Close
+          </Button>
+        </div>
+      </div>,
+      "containerInfo": <div
+        id="modal-root"
+      />,
+      "implementation": null,
+      "key": null,
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
