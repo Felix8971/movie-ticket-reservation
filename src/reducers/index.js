@@ -41,7 +41,6 @@ const moviesReducer = (state = [], action) => {
   }
 }
 
-
 export default combineReducers({
   detailsModalReducer,
   activeSeatModal,

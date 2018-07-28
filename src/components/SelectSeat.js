@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Close from '../cancel-button.svg';
 import Button from './Button';
 import {movieType} from './types';
+import {getUserId} from '../helpers.js';
 
-const userId = 'he6fe54u4s56o71d36z51no';//should be defined if the user register somewhere
+const userId = getUserId();//'he6fe54u4s56o71d36z51no';//should be defined if the user register somewhere
 
 class SelectSeat extends React.Component {
 

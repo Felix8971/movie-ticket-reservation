@@ -23,9 +23,16 @@ const  Details = props => {
   const data = props.data;
   const imgLarge = data.image.split('.')[0] + '_big.jpg';
 
+  // const test = (e) => {
+  //   e.stopPropagation();
+  //   this.props.dispatch(detailsModal(null));
+  //   console.log('close');
+  // }
+
+
   return (
-    <div className='bg-modal' >
-      <div className='detail-content'>
+    <div className='bg-modal' onClick={props.onCloseModal}>
+      <div className='detail-content' onClick={ proxy => proxy.stopPropagation()}>
         <Close className="close-btn" width={40} height={40} onClick={props.onCloseModal} />
         <img src={'images/'+imgLarge} className='img-details' />
         <div className='detail-list'>
@@ -44,7 +51,7 @@ const  Details = props => {
 
 Details.propTypes = {
   onCloseModal: PropTypes.func.isRequired,    
-  data: movieType.isRequired,//I use centralized PropTypes define in ./types/index.js (DRY principle)
+  data: movieType,//I use centralized PropTypes define in ./types/index.js (DRY principle)
 }
 
 export default Details;

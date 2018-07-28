@@ -24,11 +24,14 @@ class App extends Component {
 
   handleCloseSeats() {
     this.props.dispatch(seats(null));
-    this.props.dispatch(transactionModal(''));
+    this.props.dispatch(transactionModal(null));
   }
 
-  handleCloseDetails() {
+  handleCloseDetails(e) {
+    e.preventDefault();
+    e.stopPropagation();
     this.props.dispatch(detailsModal(null));
+    console.log('close');
   }
 
   handleOpenDetails(data) {
@@ -36,7 +39,7 @@ class App extends Component {
   }
 
   handleBuy(data) {
-    transaction(this, data)
+    transaction(this, data);
   }
 
 
@@ -95,4 +98,5 @@ class App extends Component {
   }
 }
 
+//Connects the App component to the Redux store.
 export default connect((state) => state)(App);

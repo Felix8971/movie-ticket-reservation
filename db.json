@@ -108,14 +108,14 @@
   ],
   "transactions": [
     {
-      "movieId": 1,
-      "price": 200,
+      "movieId": 2,
+      "price": 300,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 1
     },
     {
-      "movieId": 7,
+      "movieId": 1,
       "price": 600,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
@@ -123,35 +123,35 @@
     },
     {
       "movieId": 4,
-      "price": 200,
+      "price": 300,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 3
     },
     {
-      "movieId": 4,
-      "price": 600,
+      "movieId": 3,
+      "price": 300,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 4
     },
     {
-      "movieId": 4,
+      "movieId": 6,
       "price": 600,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 5
     },
     {
-      "movieId": 4,
-      "price": 200,
+      "movieId": 5,
+      "price": 300,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 6
     },
     {
-      "movieId": 4,
-      "price": 300,
+      "movieId": 7,
+      "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
       "id": 7

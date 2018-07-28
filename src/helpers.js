@@ -3,6 +3,11 @@ import fetch from 'isomorphic-fetch';
 import {/* seats, */ transactionModal, updateMoviesAction , bookMovieAction } from './actions'
 const url = 'http://localhost:3001';
 
+
+export const getUserId = () => { 
+  return 'he6fe54u4s56o71d36z51no';
+}
+
 export const getMovies = (self, id = '') => { 
 
   fetch(url + '/movies/' + id) 
@@ -14,14 +19,29 @@ export const getMovies = (self, id = '') => {
         elem.booked = false;
         return elem;
       });
-      self.props.dispatch(updateMoviesAction(movies));
+      
+      //check the transaction's list and maj the movies already booked by the user  
+      fetch(url + '/transactions')
+        .then(function (resp) { return resp.json(); })
+        .then(function (data) {
+          
+          const bookedMovies = data.filter(elem => elem.userId == getUserId());
 
-      //todo: check the transaction's list and maj the movies already booked by the user  
-      // fetch(url + '/transactions')
-      // .then(function (resp) { return resp.json(); })
-      // .then(function (transac) {
-      // });
+          //normaly we should do that server side but we don't have real server here
+          for (let i=0;i<movies.length;i++) {
+            for (let j=0;j<bookedMovies.length;j++) {
+              if ( movies[i].id == bookedMovies[j].movieId ) {
+                movies[i].booked = true;
+              }
+            };
+          };
 
+          //todo: we can save the movie schedule and set booked to false when the date is exceeded
+          //create a real server with nodejs and express + a sign in / login system
+
+          self.props.dispatch(updateMoviesAction(movies));
+        })
+      
     })
     .catch(function(error) {
       if ( self ) { 
@@ -49,3 +69,5 @@ export const transaction = (self, data) => {
       self.props.dispatch(transactionModal('Sorry an error occurred !'));
     });
 }
+
+
