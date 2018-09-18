@@ -22,7 +22,7 @@ class SelectSeat extends React.Component {
       const type = elem[0];
       const price = elem[1];
       return (
-        <Button key={type} handleClick={() => { debugger; this.props.handleBuy({ id, title, currency, price, userId }) }}>
+        <Button key={type} handleClick={() => { this.props.handleBuy({ id, title, currency, price, userId }) }}>
           {type} seat: {price} {currency}
         </Button>
       )
