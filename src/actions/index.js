@@ -23,3 +23,8 @@ export const bookMovieAction = id => ({
   type: 'BOOK_MOVIE',
   id,
 });
+
+export const helloAction = name => ({
+  type: 'SAY_HELLO',
+  name,
+});

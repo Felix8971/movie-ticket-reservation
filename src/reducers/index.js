@@ -27,15 +27,23 @@ const detailsModalReducer = (state = null, action) => {
   }
 }
 
-
 const moviesReducer = (state = [], action) => {
   switch (action.type) {
     case 'GET_MOVIES':
       return action.data
     case 'BOOK_MOVIE':
       const _state =  Object.assign([], state);
-      _state[action.id].booked = true; 
+      _state[action.id].booked = true;
       return _state;
+    default:
+      return state
+  }
+}
+
+const helloReducer = (state = 'Hello man!', action) => {
+  switch (action.type) {
+    case 'SAY_HELLO':
+      return 'Hello ' + action.name
     default:
       return state
   }
@@ -46,4 +54,5 @@ export default combineReducers({
   activeSeatModal,
   activeTransactionModal,
   moviesReducer,
+  helloReducer,
 })

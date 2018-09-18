@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 //import styled from 'styled-components';
 import Close from '../cancel-button.svg';
 import {movieType} from './types';
+import { connect } from 'react-redux';
 
-//I can use a functional componennt instead of a class component because 
-//my component just render props without logic state and life cycle events  
+
+//I can use a functional component instead of a class component because
+//my component just render props without logic state and life cycle events
 const  Details = props => {
+
 
   if (!props.data) {
     return null;
   }
-  
+
   //Functional Component (with destructuring of props)
   const Info = ({name, value}) => (
     <div className="movie-info">
@@ -19,7 +22,7 @@ const  Details = props => {
       <div className="value">{value}</div>
     </div>
   );
-  
+
   const data = props.data;
   const imgLarge = data.image.split('.')[0] + '_big.jpg';
 
@@ -29,7 +32,6 @@ const  Details = props => {
   //   console.log('close');
   // }
 
-
   return (
     <div className='bg-modal' onClick={props.onCloseModal}>
       <div className='detail-content' onClick={ proxy => proxy.stopPropagation()}>
@@ -37,6 +39,7 @@ const  Details = props => {
         <img src={'images/'+imgLarge} className='img-details' />
         <div className='detail-list'>
           <h1>{data.title}</h1>
+          <p>{props.hello}</p>
           <Info name='Genre' value={data.genre}/>
           <Info name='Director' value={data.director}/>
           <Info name='Stars' value={data.stars}/>
@@ -50,8 +53,17 @@ const  Details = props => {
 
 
 Details.propTypes = {
-  onCloseModal: PropTypes.func.isRequired,    
+  onCloseModal: PropTypes.func.isRequired,
   data: movieType,//I use centralized PropTypes define in ./types/index.js (DRY principle)
+  hello: PropTypes.string,
 }
 
-export default Details;
+
+const mapStateToProps = (state) => {
+  return {
+    hello: state.helloReducer,
+  }
+};
+
+//Connects the App component to the Redux store.
+export default connect(mapStateToProps)(Details);
