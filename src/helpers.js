@@ -1,6 +1,6 @@
 
 import fetch from 'isomorphic-fetch';
-import {/* seats, */ transactionModal, updateMoviesAction , bookMovieAction } from './actions'
+import {/* seats, */ transactionModal, /*updateMoviesAction,*/  bookMovieAction } from './actions'
 const url = 'http://localhost:3001';
 
 
@@ -8,7 +8,7 @@ export const getUserId = () => {
   return 'he6fe54u4s56o71d36z51no';
 }
 
-export const getMovies = (dispatch, id = '') => {
+/*export const getMovies = (dispatch, id = '') => {
 
   fetch(url + '/movies/' + id)
     .then(function (resp) { return resp.json(); })
@@ -47,9 +47,10 @@ export const getMovies = (dispatch, id = '') => {
         dispatch(transactionModal('Sorry an error occurred !'));
       }
     });
-}
+}*/
 
 export const transaction = (dispatch, data) => {
+  
   fetch(url + '/transactions', {
     method: 'POST',
     headers: {
@@ -61,7 +62,9 @@ export const transaction = (dispatch, data) => {
     .then(function (resp) { return resp.json(); })
     .then(function () {
       const msg = `Congratulations!\nYour seat for the film ${data.title} has been booked.\nPlease check your emails for more informations.`;
+      debugger;
       dispatch(transactionModal(msg));
+      debugger;
       dispatch(bookMovieAction(data.id-1));
     })
     .catch(function(error) {

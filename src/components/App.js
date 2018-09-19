@@ -6,15 +6,10 @@ import NavBar from './NavBar';
 import Modal from './Modal';
 import Details from './Details';
 import CardList from './CardList';
-import { getMovies } from '../helpers';
 
 class App extends Component {
   constructor(props) {
     super();
-  }
-
-  componentDidMount() {
-    getMovies(this.props.dispatch);//we add movies to the store
   }
 
   render() {

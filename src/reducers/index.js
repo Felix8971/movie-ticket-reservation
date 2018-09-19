@@ -27,14 +27,17 @@ const detailsModalReducer = (state = null, action) => {
   }
 }
 
-const moviesReducer = (state = [], action) => {
+const sagaMoviesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'GET_MOVIES':
-      return action.data
+    case 'MOVIES_FETCH_SUCCEEDED':
+      return action.movies
+    case 'MOVIES_FETCH_FAILED':
+      return action.message
     case 'BOOK_MOVIE':
+      debugger;
       const _state =  Object.assign([], state);
       _state[action.id].booked = true;
-      return _state;
+      return _state;  
     default:
       return state
   }
@@ -53,6 +56,6 @@ export default combineReducers({
   detailsModalReducer,
   activeSeatModal,
   activeTransactionModal,
-  moviesReducer,
   helloReducer,
+  sagaMoviesReducer,
 })

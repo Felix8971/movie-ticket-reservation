@@ -9,9 +9,9 @@ describe('todo actions', () => {
   })
 
   it('transactionModal should create OPEN_TRANSACTION_MODAL action', () => {
-    expect(actions.transactionModal("Transaction done!")).toEqual({
+    expect(actions.transactionModal('Transaction done!')).toEqual({
       type: 'OPEN_TRANSACTION_MODAL',
-      message: "Transaction done!",
+      message: 'Transaction done!',
     })
   })
 

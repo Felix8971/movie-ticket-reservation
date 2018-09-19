@@ -108,18 +108,18 @@
   ],
   "transactions": [
     {
-      "movieId": 1,
-      "price": 300,
+      "movieId": 4,
+      "price": 200,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
-      "id": 7
+      "id": 1
     },
     {
-      "movieId": 3,
+      "movieId": 2,
       "price": 300,
       "currency": "THB",
       "userId": "he6fe54u4s56o71d36z51no",
-      "id": 8
+      "id": 2
     }
   ]
 }

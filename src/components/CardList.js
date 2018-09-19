@@ -3,22 +3,26 @@ import SelectSeat from './SelectSeat'
 import {detailsModal, helloAction, seats, transactionModal} from '../actions';
 import connect from 'react-redux/es/connect/connect';
 import Button from './Button';
-import {transaction} from '../helpers';
+import { /*getMovies,*/ transaction} from '../helpers';
 
 class CardList extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
   }
 
+  componentDidMount() {
+    debugger;
+    this.props.onRequestMovies();
+    //getMovies(this.props.dispatch);//we add movies to the store
+  }
+
   render() {
-    const self = this;
-
-    return this.props.movies.map(function (item, i) {
-
+    debugger;
+    return this.props.movies.map( (item, i) => {
       let button;
       if (!item.booked) {
         button = <Button className="button" handleClick={() => {
-          self.props.onOpenSeatModal(i)
+          this.props.onOpenSeatModal(i)
         }}>Buy seat</Button>
       } else {
         button = <div><i className="fas fa-loveseat"></i>BOOKED!</div>
@@ -27,15 +31,15 @@ class CardList extends React.Component {
       return (
         <div key={i} className="item">
           <div className="card">
-            <div className="img" onClick={() => { self.props.onOpenDetails(item) }} style={{ backgroundImage: 'url(images/' + item.image + ')' }}></div>
+            <div className="img" onClick={() => { this.props.onOpenDetails(item) }} style={{ backgroundImage: 'url(images/' + item.image + ')' }}></div>
             <article>
               <h1 className="movie-title">{item.title}</h1>
               {button}
             </article>
             <SelectSeat
-              show={i == self.props.activeSeatModal}
-              handleClose={self.props.onCloseSeat}
-              handleBuy={self.props.handleBuy}
+              show={i == this.props.activeSeatModal}
+              handleClose={this.props.onCloseSeat}
+              handleBuy={this.props.handleBuy}
               item={item}
             />
           </div>
@@ -48,10 +52,11 @@ class CardList extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.moviesReducer,
+    movies: state.sagaMoviesReducer,
     activeSeatModal: state.activeSeatModal,
   }
 };
+
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -67,8 +72,11 @@ function mapDispatchToProps(dispatch) {
       dispatch(transactionModal(null));
     },
     handleBuy : (data) => {
-      transaction(dispatch, data);
+      //transaction(dispatch, data);
+      dispatch({ type: 'BOOK_A_MOVIE', data });
     },
+    onRequestMovies : () => dispatch({ type: 'MOVIES_FETCH_REQUESTED' }),
+    dispatch,
   };
 }
 
